@@ -18,7 +18,7 @@ class ApiController extends Controller
         $apiModel = new Api();
         $response['news'] = $apiModel->fetchNewsFromSource($response['sourceId']);
         $response['newsSources'] = $this->fetchAllNewsSources();
-        return view('welcome', $response);
+        return view('sources/index', $response);
     }
     /**
      * @param $request
